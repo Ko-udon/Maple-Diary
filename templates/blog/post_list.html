@@ -1,0 +1,24 @@
+<h1>Post List</h1>
+<!-- 검색 기능 추가 -->
+<form action="" method="GET">
+    <input type="text" id = 'myInput' name="q" value="{{ request.GET.q }}">
+    <input type="submit" id="myButton" value="검색">
+</form>
+
+<a href="{% url 'blog:post_search_tag' '일상' %}">#일상</a>
+<a href="{% url 'blog:post_search_tag' '모험' %}">#모험</a>
+<a href="{% url 'blog:post_search_tag' '보스' %}">#보스</a>
+<a href="{% url 'blog:post_search_tag' '몬스터' %}">#몬스터</a>
+<a href="{% url 'blog:post_search_tag' '큐브' %}">#큐브</a>
+
+
+<ul>
+    {% for post in post_list %}
+    <li>
+        <a href="{% url 'blog:post_detail' post.pk %}">
+            {{ post.title }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'blog:post_write' %}">글작성</a>
