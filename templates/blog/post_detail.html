@@ -14,10 +14,11 @@
 <section>
     <h3>댓글</h3>
     {% for comment in post.comments.all %}
-        <p>{{comment.message}}</p>
-        <p>{{comment.author}}</p>
+        <p>내용: {{comment.message}}</p>
+        <p>작성자: {{comment.author}}</p>
         <p>좋아요: {{comment.like_count}}</p>
         <p>{{comment.updated_at}}</p>
+        <hr>
         {% comment %} <form action="{% url 'blog:comment_new' post.pk %}" method="post">
             {% csrf_token %}
             <input type="submit" value="좋아요">
@@ -31,6 +32,7 @@
         {% csrf_token %}
         {{ comment_form.as_p }}
         <input type="submit" value="댓글 작성">
+        <hr>
     </form>
 </section>
 

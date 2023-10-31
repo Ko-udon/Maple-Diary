@@ -9,25 +9,26 @@ from .forms import PostForm, CommentForm
 from django.urls import reverse_lazy
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ObjectDoesNotExist
+from django.http import Http404
 import requests
 
 def main(request):
-  return render(request, 'main.html')
+    return render(request, 'main.html')
 
 # 블로그 첫 화면, 게시글 조회
 class PostListView(ListView):
     model = Post
     def get_queryset(self):
-      qs = super().get_queryset()
-      q = self.request.GET.get('q', '')
-
-      if q:
-          qs = qs.filter(title__icontains=q)
-      return qs
+        qs = super().get_queryset()
+        q = self.request.GET.get('q', '')
+        if q:
+            qs = qs.filter(title__icontains=q)
+        return qs
 
 post_list = PostListView.as_view()
 
-# 제목검색
+# 제목검색, 보류
 class PostSearchByTitleView(ListView):
     model = Post
     def get_queryset(self):
@@ -35,7 +36,7 @@ class PostSearchByTitleView(ListView):
         tag = self.kwargs['title']
 
         if qs:
-          qs = qs.filter(title__icontains = tag)
+            qs = qs.filter(title__icontains = tag)
         return qs
     
 post_search_title = PostSearchByTitleView.as_view()
@@ -49,7 +50,7 @@ class PostSearchByTagView(ListView):
         tag = self.kwargs['tag']
 
         if qs:
-          qs = qs.filter(category__name__contains = tag)
+            qs = qs.filter(category__name__contains = tag)
         return qs
     
 
@@ -78,6 +79,7 @@ class PostDetailView(DetailView):
 
     # def test_func(self): # UserPassesTestMixin에 있고 test_func() 메서드를 오버라이딩, True, False 값으로 접근 제한
     #     return self.get_object().is_private == False
+    
 
     def get_context_data(self, **kwargs):
         '''
@@ -139,6 +141,9 @@ def comment_new(request, pk):
         'form': form,
     })
 
+
+def post_detail_fail(request):
+    return render(request, 'blog/post_detail_fail.html')
 
 
 # def main(request):

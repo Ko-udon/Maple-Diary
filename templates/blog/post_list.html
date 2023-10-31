@@ -1,8 +1,15 @@
-<h1>Post List</h1>
+<h1><a href="{% url 'user:main' %}">블로그</a></h1>
 <!-- 검색 기능 추가 -->
+<script>
+    // URL 강제 변경,,
+    function changeURL() {
+        history.pushState(null, null, "{% url 'blog:post_list' %}")
+    }
+</script>
+
 <form action="" method="GET">
-    <input type="text" id = 'myInput' name="q" value="{{ request.GET.q }}">
-    <input type="submit" id="myButton" value="검색">
+    <input type="text" id = 'search' name="q" value="{{ request.GET.q }}">
+    <input onclick = "changeURL()" type="submit" id="searchBtn" value="검색">
 </form>
 
 <a href="{% url 'blog:post_search_tag' '일상' %}">#일상</a>
