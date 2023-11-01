@@ -1,0 +1,11 @@
+프로필
+<p>아아디: {{usercharacter.user_id}}</p>
+<p>캐릭터 이름: {{usercharacter}}</p>
+<p>캐릭터 서버: {{usercharacter.character_server}}</p>
+{% if usercharacter.character_img %}
+  <img src="{{usercharacter.character_img.url}}">
+{% endif %}
+<p>프로필 설명: {{usercharacter.profile_word}}</p>
+
+<hr>
+<a href="{% url 'user:profile_edit' pk=user.pk %}">프로필 변경</a>

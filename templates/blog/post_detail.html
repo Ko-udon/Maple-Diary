@@ -1,28 +1,45 @@
-<p>{{post.title}}</p>
-<p>{{post.content}}</p>
+<a href="{% url 'blog:post_list' %}">블로그로 이동하기</a>
+<hr>
+
+<p>제목: {{post.title}}</p>
+<p>글 내용: {{post.content}}</p>
+{% if post.image %}
+    <img src="{{post.image.url}}">
+{% endif %}
+
 <p>조회수 : {{post.view_count}}</p>
 
 {% for tag in post.category.all %}
     <a href="/blog/search/{{ tag.name }}">#{{ tag.name }}</a>
 {% endfor %}
 
-{% if post.file_upload %}
-<video src="{{post.file_upload.url}}" controls></video>
-{% endif %}
 
 <hr>
 <section>
     <h3>댓글</h3>
     {% for comment in post.comments.all %}
-        <p>내용: {{comment.message}}</p>
-        <p>작성자: {{comment.author}}</p>
-        <p>좋아요: {{comment.like_count}}</p>
-        <p>{{comment.updated_at}}</p>
-        <hr>
+
+        {% if comment.parent_comment %}
+                <script>
+                    var myDiv = document.getElementById("{{comment.parent_comment}}");
+                    var content = "<h3>대댓글 입니다.</h3><hr><p>&nbsp;&nbsp;&nbsp;내용: {{comment.message}}</p><p>&nbsp;&nbsp;&nbsp;작성자: {{comment.author}}</p><p>&nbsp;&nbsp;&nbsp;좋아요: {{comment.like_count}}</p><p>&nbsp;&nbsp;&nbsp;대댓글: {{comment.parent_comment}}</p><p>&nbsp;&nbsp;&nbsp;{{comment.updated_at}}</p><hr>";
+                    myDiv.innerHTML += content;
+                </script>                
+
+        {% else %}
+        <li id = "{{comment.message}}">
+            <p>내용: {{comment.message}}</p>
+            <p>작성자: {{comment.author}}</p>
+            <p>좋아요: {{comment.like_count}}</p>
+            <p>{{comment.updated_at}}</p>
+            <hr>
+        </li>
+        
         {% comment %} <form action="{% url 'blog:comment_new' post.pk %}" method="post">
             {% csrf_token %}
             <input type="submit" value="좋아요">
         </form> {% endcomment %}
+        {% endif %}
     {% endfor %}
 </section>
 

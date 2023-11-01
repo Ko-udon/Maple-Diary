@@ -11,7 +11,13 @@
 <body>
   <h1>사용자 프로필</h1>
   <p>{{user}}의 프로필</p>
+  <p>{{user.email}}</p>
   main 화면
+  <hr>
+  <a href="{% url 'user:profile_write' %}">프로필 작성</a>
+  <hr>
+  <a href="{% url 'user:profile_edit' pk=user.pk %}">프로필 변경</a>
+  <hr>
   <a href="{% url 'blog:post_list' %}">블로그로 이동하기</a>
 </body>
 

@@ -15,7 +15,16 @@
       <hr>
       <a href="{% url 'user:register' %}">회원가입</a>
       <hr>
-      <a href="{% url 'user:login' %}">로그인</a>
+      {% if user.pk %}
+        <a href="{% url 'user:logout' %}">로그아웃</a>
+        <hr>
+        <a href="{% url 'user:profile_detail' pk=user.pk %}">프로필 보기</a>
+      {% else %}
+        <a href="{% url 'user:login' %}">로그인</a>
+        
+      {% endif %}
+      
+      
 </body>
 
 </html>
