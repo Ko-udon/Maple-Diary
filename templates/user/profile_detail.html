@@ -8,4 +8,7 @@
 <p>프로필 설명: {{usercharacter.profile_word}}</p>
 
 <hr>
+<a href="{% url 'user:main' %}">돌아가기</a>
+
+<hr>
 <a href="{% url 'user:profile_edit' pk=user.pk %}">프로필 변경</a>

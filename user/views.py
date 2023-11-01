@@ -10,18 +10,33 @@ from .models import UserCharacter
 from .forms import UserCharacterForm
 from django.urls import reverse_lazy
 
+from django.contrib.auth import login as auth_login
+from django.contrib.auth.models import User
 
 def main(request):
     return render(request, 'main.html')
 
 
-register = CreateView.as_view(
-    form_class = UserCreationForm,
-    template_name = 'user/form.html',
-    success_url = '/login/'
-)
+# register = CreateView.as_view(
+#     form_class = UserCreationForm,
+#     template_name = 'user/form.html',
+#     success_url = '/login/'
+# )
 
+class RegisterView(CreateView):
+    form_class = UserCreationForm
+    template_name = 'user/form.html'
+    success_url = '/profile/write' # 회원가입후 프로필 작성페이지로 이동!
 
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        user = form.save()
+        auth_login(self.request, user) # 자동 로그인
+        # UserCharacter.objects.create(user_id = User)
+        return response
+    
+
+register = RegisterView.as_view()
 
 def success_register(request):
     return render(request, 'success_register.html')
@@ -57,6 +72,7 @@ class ProfileCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form) # 이렇게 호출했을 때 저장합니다.
 
 profile_write = ProfileCreateView.as_view()
+
 
 #프로필 수정하기
 class ProfileEditView(UpdateView):

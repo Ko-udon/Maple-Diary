@@ -13,13 +13,14 @@
       <hr>
       <a href="{% url 'blog:post_list' %}">블로그로 이동하기</a>
       <hr>
-      <a href="{% url 'user:register' %}">회원가입</a>
-      <hr>
       {% if user.pk %}
         <a href="{% url 'user:logout' %}">로그아웃</a>
         <hr>
         <a href="{% url 'user:profile_detail' pk=user.pk %}">프로필 보기</a>
       {% else %}
+        <hr>
+        <a href="{% url 'user:register' %}">회원가입</a>
+        <hr>
         <a href="{% url 'user:login' %}">로그인</a>
         
       {% endif %}

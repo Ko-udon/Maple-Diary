@@ -1,6 +1,15 @@
 <a href="{% url 'blog:post_list' %}">블로그로 이동하기</a>
 <hr>
 
+{% if post.is_private and post.author == user %}
+프라이빗인데 본인이 작성한 글
+{% elif post.is_private and post.author != user %}
+글 접근 권한이 없습니다!
+{% else %}
+퍼블릭
+{% endif %}
+
+
 <p>제목: {{post.title}}</p>
 <p>글 내용: {{post.content}}</p>
 {% if post.image %}

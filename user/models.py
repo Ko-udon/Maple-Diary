@@ -1,11 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
+
 # Create your models here.
 
-class User(models.Model):
-    def save(self):
-        if is_new:
-            UserCharacter.objects.create(user=self)
+# class User(models.Model):
+#     def save(self):
+#         if is_new:
+#             UserCharacter.objects.create(user=self)
 
 #사용자 추가 프로필, 
 class UserCharacter(models.Model):
