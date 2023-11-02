@@ -12,6 +12,7 @@ urlpatterns = [
     path('delete/<int:pk>/', views.post_delete, name='post_delete'),
     path('search/<str:tag>/', views.post_search_tag, name = 'post_search_tag'),
     path('<int:pk>/comment/new/', views.comment_new, name='comment_new'),
+    path('<int:pk>/comment/<int:parent_comment>/reply/', views.comment_reply, name='comment_reply'),
     path('post_detail_fail/', views.post_detail_fail, name = 'post_detail_fail'),
     # path('cube_history/', views.cube_history, name = 'cube_history')
 ]

@@ -133,6 +133,26 @@ def comment_new(request, pk):
             comment = form.save(commit=False) # commit=False는 DB에 저장하지 않고 객체만 반환
             comment.post = post
             comment.author = request.user
+            # comment.parent_comment = 
+            comment.save()
+            return redirect('blog:post_detail', pk)
+    else:
+        form = CommentForm()
+    return render(request, 'blog/form.html', {
+        'form': form,
+    })
+
+# 대댓글작성
+@login_required
+def comment_reply(request, pk, parent_comment):
+    post = Post.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False) # commit=False는 DB에 저장하지 않고 객체만 반환
+            comment.post = post
+            comment.author = request.user
+            comment.parent_comment = Comment.objects.get(pk = parent_comment)
             comment.save()
             return redirect('blog:post_detail', pk)
     else:
