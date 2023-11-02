@@ -23,7 +23,11 @@
     {% for post in post_list %}
     <li>
         <a href="{% url 'blog:post_detail' post.pk %}">
-            {{ post.title }}
+            {% if post.is_private %}
+                {{ post.title }}(비공개){{post.author}}
+            {% else %}
+                {{ post.title }}
+            {% endif %}
         </a>
     </li>
     {% endfor %}

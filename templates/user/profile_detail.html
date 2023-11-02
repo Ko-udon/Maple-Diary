@@ -1,7 +1,10 @@
 프로필
 <p>아아디: {{usercharacter.user_id}}</p>
+<p>생성일: {{user.date_joined}}</p>
 <p>캐릭터 이름: {{usercharacter}}</p>
-<p>캐릭터 서버: {{usercharacter.character_server}}</p>
+{% for server in usercharacter.character_server.all %}
+  <p>캐릭터 서버: {{server.name}}</p>
+{% endfor %}
 {% if usercharacter.character_img %}
   <img src="{{usercharacter.character_img.url}}">
 {% endif %}
@@ -12,3 +15,7 @@
 
 <hr>
 <a href="{% url 'user:profile_edit' pk=user.pk %}">프로필 변경</a>
+
+
+<hr>
+<p>api: {{usercharacter.maple_api_key}}</p>

@@ -16,11 +16,11 @@ class UserCharacter(models.Model):
     )
     # , related_name='user_character'
     character_name = models.TextField(blank=True)
-    character_server = models.ManyToManyField('CharacterServer', blank=True)
+    character_server = models.ManyToManyField('CharacterServer', blank=True) 
     character_img = models.ImageField(
         upload_to='UserCharacter/images/%Y/%m/%d/', blank=True)
     profile_word = models.TextField(blank=True)
-
+    maple_api_key = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
     

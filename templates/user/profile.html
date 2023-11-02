@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html lang="ko-KR">
+프로필
+<p>아아디: {{usercharacter.user_id}}</p>
+<p>생성일: {{user.date_joined}}</p>
+<p>캐릭터 이름: {{usercharacter}}</p>
+<p>캐릭터 서버: {{usercharacter.character_server}}</p>
+{% if usercharacter.character_img %}
+  <img src="{{usercharacter.character_img.url}}">
+{% endif %}
+<p>프로필 설명: {{usercharacter.profile_word}}</p>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>사용자 프로필</title>
-</head>
+<hr>
+<a href="{% url 'user:main' %}">돌아가기</a>
 
-<body>
-  <h1>사용자 프로필</h1>
-  <p>{{user}}의 프로필</p>
-  <p>{{user.email}}</p>
-  main 화면
-  <hr>
-  <a href="{% url 'user:profile_write' %}">프로필 작성</a>
-  <hr>
-  <a href="{% url 'user:profile_edit' pk=user.pk %}">프로필 변경</a>
-  <hr>
-  <a href="{% url 'blog:post_list' %}">블로그로 이동하기</a>
-</body>
-
-</html>
+<hr>
+<a href="{% url 'user:profile_edit' pk=user.pk %}">프로필 변경</a>

@@ -28,7 +28,7 @@ class PostListView(ListView):
 
 post_list = PostListView.as_view()
 
-# 제목검색, 보류
+# 제목검색
 class PostSearchByTitleView(ListView):
     model = Post
     def get_queryset(self):
@@ -144,16 +144,3 @@ def comment_new(request, pk):
 
 def post_detail_fail(request):
     return render(request, 'blog/post_detail_fail.html')
-
-
-# def main(request):
-#   url = 'https://public.api.nexon.com/openapi/maplestory/v1/cube-use-results?count=10&date=2023-10-20&cursor='
-#   headers = {
-#     'Authorization':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJYLUFwcC1SYXRlLUxpbWl0IjoiNTAwOjEwIiwiYWNjb3VudF9pZCI6IjY1NTI2ODI4NyIsImF1dGhfaWQiOiIyIiwiZXhwIjoxNzEzNzc1MDg4LCJpYXQiOjE2OTgyMjMwODgsIm5iZiI6MTY5ODIyMzA4OCwic2VydmljZV9pZCI6IjQzMDAxMTM5NyIsInRva2VuX3R5cGUiOiJBY2Nlc3NUb2tlbiJ9.w2ZN2vrSgX24SFLTfO_5fdMUzju56PpyVLBAoIArtM8'
-#   }
-#   response = requests.get(url, headers=headers)
-#   result = response.json()
-
-#   result = result['cube_histories']
-#   print(result[0])
-#   return render(request, 'blog/blog.html', {'result':result[0]})
