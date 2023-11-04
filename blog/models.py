@@ -5,12 +5,12 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE
     )
-    is_private = models.BooleanField()
-    title = models.CharField(max_length=100)
+    is_private = models.BooleanField(verbose_name="비공개 게시")
+    title = models.CharField(max_length=100, verbose_name="글 제목")
     image = models.ImageField(
-        upload_to='blog/images/%Y/%m/%d/', blank=True)
-    content = models.TextField()
-    category = models.ManyToManyField('Tag', blank=True)
+        upload_to='blog/images/%Y/%m/%d/', verbose_name="이미지 업로드", blank=True)
+    content = models.TextField(verbose_name="내용")
+    category = models.ManyToManyField('Tag', verbose_name="태그", blank=True)
     view_count = models.PositiveIntegerField(default=0)
     like_count = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -30,7 +30,7 @@ class Comment(models.Model):
         User, on_delete=models.CASCADE
     )
     like_count = models.PositiveIntegerField(default=0)
-    message = models.TextField()
+    message = models.TextField(verbose_name="")
 
     parent_comment = models.ForeignKey('self', on_delete=models.CASCADE, null=True)
 

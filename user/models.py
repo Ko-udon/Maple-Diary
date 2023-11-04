@@ -15,12 +15,12 @@ class UserCharacter(models.Model):
         User, on_delete=models.CASCADE
     )
     # , related_name='user_character'
-    character_name = models.TextField(blank=True)
-    character_server = models.ManyToManyField('CharacterServer', blank=True) 
+    character_name = models.TextField(blank=True, verbose_name="캐릭터 이름")
+    character_server = models.ManyToManyField('CharacterServer', verbose_name="캐릭터 서버", blank=True) 
     character_img = models.ImageField(
-        upload_to='UserCharacter/images/%Y/%m/%d/', blank=True)
-    profile_word = models.TextField(blank=True)
-    maple_api_key = models.TextField(blank=True)
+        upload_to='UserCharacter/images/%Y/%m/%d/', verbose_name="캐릭터 이미지", blank=True)
+    profile_word = models.TextField(verbose_name="자기소개", blank=True)
+    maple_api_key = models.TextField(verbose_name="API 키", blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
     

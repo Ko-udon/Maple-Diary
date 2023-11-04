@@ -24,7 +24,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="{% url 'user:main' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'user:main' %}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'blog:post_list' %}">블로그</a></li>
                 {% if user.pk %}
                   <li class="nav-item"><a class="nav-link" href="{% url 'user:logout' %}">로그아웃</a></li>
@@ -43,12 +43,22 @@
 <header class="py-5 bg-light border-bottom mb-4">
     <div class="container">
         <div class="text-center my-5"> 
-            <h1 class="fw-bolder">Blog</h1>
-            <a href="{% url 'blog:post_write' %}"><p class="lead mb-0">글작성</p></a>
+            <div class="card mb-4">
+                <a href="#!"><img class="card-img-top" src="{% static 'assets/artwork_111.jpg' %}" alt="..." width = '100px' height = '700px' /></a>
+                <div class="card-body">
+                    <h1 class="fw-bolder">게시판</h1>
+                    {% if user.pk %}
+                        <p class="card-text"><a href="{% url 'blog:post_write' %}"><p class="lead mb-0">글쓰기</p></a></p>
+                    {% endif %}
+                    
+                    
+                    
+                </div>
+            </div>
 
         </div>
-    </div>
-  </header>
+    </div> 
+  </header> 
 
 
 <!-- 검색 기능 추가 -->
@@ -70,38 +80,46 @@
 
                 {% if post.is_private %}
                     <div class="card mb-4">
-                        <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                        {% if post.image %}
+                            <img class="card-img-top" src="{{post.image.url}}" alt="..." />
                         <div class="card-body">
                             <div class="small text-muted">{{ post.updated_at }}</div>
-        
-                            <h2 class="card-title h4">{{ post.title }}(비공개){{post.author}}</h2>
-                            <a class="btn btn-primary" href="{% url 'blog:post_detail' post.pk %}">Read more →</a>
+                            <h2 class="card-title h4">{{ post.title }}(비공개) by {{post.author}}</h2>
+                            <a class="btn btn-primary" href="{% url 'blog:post_detail' post.pk %}">글 보기</a>
                         </div>
+                        {% else %}
+                            <div class="card-body">
+                                <div class="small text-muted">{{ post.updated_at }}</div>
+            
+                                <h2 class="card-title h4">{{ post.title }}</h2>
+                                <a class="btn btn-primary" href="{% url 'blog:post_detail' post.pk %}">글 보기</a>
+                            </div>
+
+                        {% endif %}
                     </div>
                     
                 {% else %}
                 <div class="card mb-4">
-                    <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                    <div class="card-body">
-                        <div class="small text-muted">{{ post.updated_at }}</div>
-    
-                        <h2 class="card-title h4">{{ post.title }}</h2>
-                        <a class="btn btn-primary" href="{% url 'blog:post_detail' post.pk %}">Read more →</a>
-                    </div>
+                    {% if post.image %}
+                            <img class="card-img-top" src="{{post.image.url}}" alt="..." />
+                        <div class="card-body">
+                            <div class="small text-muted">{{ post.updated_at }}</div>
+                            <h2 class="card-title h4">{{ post.title }}</h2>
+                            <a class="btn btn-primary" href="{% url 'blog:post_detail' post.pk %}">글 보기</a>
+                        </div>
+                        {% else %}
+                            <div class="card-body">
+                                <div class="small text-muted">{{ post.updated_at }}</div>
+            
+                                <h2 class="card-title h4">{{ post.title }}</h2>
+                                <a class="btn btn-primary" href="{% url 'blog:post_detail' post.pk %}">글 보기</a>
+                            </div>
+
+                        {% endif %}
                 </div>
                 {% endif %}
                 
 
-                
-                {% comment %} <li>
-                    <a href="{% url 'blog:post_detail' post.pk %}">
-                        {% if post.is_private %}
-                            {{ post.title }}(비공개){{post.author}}
-                        {% else %}
-                            {{ post.title }}
-                        {% endif %}
-                    </a>
-                </li> {% endcomment %}
                 {% endfor %}
             </ul>
 
@@ -150,20 +168,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-{% comment %} <a href="{% url 'blog:post_search_tag' '일상' %}">#일상</a>
-<a href="{% url 'blog:post_search_tag' '모험' %}">#모험</a>
-<a href="{% url 'blog:post_search_tag' '보스' %}">#보스</a>
-<a href="{% url 'blog:post_search_tag' '몬스터' %}">#몬스터</a>
-<a href="{% url 'blog:post_search_tag' '큐브' %}">#큐브</a> {% endcomment %}
-
-
-
-
-
 
 
 
