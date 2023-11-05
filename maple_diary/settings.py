@@ -140,4 +140,4 @@ LOGIN_REDIRECT_URL = '/'
 
 
 # 404 페이지 커스텀
-# DEBUG = False
+DEBUG = False
