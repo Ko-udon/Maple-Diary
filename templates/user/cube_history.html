@@ -74,22 +74,44 @@
                 </ul>
             </div>
             <div class="col-sm-6">
-                <ul class="list-unstyled mb-0">
+                <ul class="list-unstyled mb-0" >
                   <p class="card-text">{{ result.character_name }} </p>
                   <p class="card-text">{{ result.cube_type }} </p>
                   <p class="card-text">{{ result.item_level }}</p>
-                  <p class="card-text">{{ result.target_item }}</p>
                   <p class="card-text">{{ result.potential_option_grade }}</p>
-                  {% for opt in result.after_potential_options %}
-                    <p class="card-text">{{opt.value}}</p>
-                  {% endfor %}
+                  <div id = 'cubeResult'>
+                    <p class="card-text">{{ result.target_item }}</p>
+                    {% for opt in result.after_potential_options %}
+                      <p class="card-text">{{opt.value}}</p>
+                    {% endfor %}
+                  </div>
+                  
 
                 </ul>
             </div>
         </div>
     </div>
   </div>
+  <input class="btn btn-primary" id="copyBtn" value="복사">
 {% endif %}
+
+
+
+<script>
+  // div 취득
+  const result = document.getElementById("cubeResult");
+
+  // button 클릭 이벤트
+  document.getElementById("copyBtn").onclick = () => {
+    tx = result.textContent
+    tx = tx + '<br>'
+    console.log(tx)
+    window.navigator.clipboard.writeText(result.textContent).then(() => {
+      // 복사가 완료되면 호출된다.
+      alert("복사완료");
+    });
+  };
+</script>
 
 <!-- Footer-->
 <footer class="py-5 bg-dark">
