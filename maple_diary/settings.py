@@ -139,5 +139,5 @@ LOGIN_URL = '/user/login/'
 LOGIN_REDIRECT_URL = '/'
 
 
-# 404 페이지 커스텀
+# DEBUG 모드 헤제
 DEBUG = False

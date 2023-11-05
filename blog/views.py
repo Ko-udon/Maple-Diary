@@ -34,11 +34,9 @@ class PostSearchByTitleView(ListView):
     def get_queryset(self):
         qs = super().get_queryset()
         tag = self.kwargs['title']
-
         if qs:
             qs = qs.filter(title__icontains = tag)
         return qs
-    
 post_search_title = PostSearchByTitleView.as_view()
 
 
@@ -48,7 +46,6 @@ class PostSearchByTagView(ListView):
     def get_queryset(self):
         qs = super().get_queryset()
         tag = self.kwargs['tag']
-
         if qs:
             qs = qs.filter(category__name__contains = tag)
         return qs
@@ -66,25 +63,18 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     template_name = 'blog/form.html'
 
     def form_valid(self, form):
-        video = form.save(commit=False) # commit=False는 DB에 저장하지 않고 객체만 반환
+        video = form.save(commit=False) 
         video.author = self.request.user
-        return super().form_valid(form) # 이렇게 호출했을 때 저장합니다.
+        return super().form_valid(form) 
 
 post_write = PostCreateView.as_view()
 
 # 글 상세 조회
 class PostDetailView(DetailView):
     model = Post
-    # context_object_name = 'licat_objects' # {{licat_objects.title}} 이런식으로 사용 가능
-
-    # def test_func(self): # UserPassesTestMixin에 있고 test_func() 메서드를 오버라이딩, True, False 값으로 접근 제한
-    #     return self.get_object().is_private == False
-    
 
     def get_context_data(self, **kwargs):
-        '''
-        여기서 원하는 쿼리셋이나 object를 추가한 후 템플릿으로 전달할 수 있습니다.
-        '''
+        # 게시글에 댓글을 담아서 불러오기
         context = super().get_context_data(**kwargs)
         context['comment_form'] = CommentForm()
         return context
@@ -106,7 +96,7 @@ class PostUpdateView(UserPassesTestMixin, UpdateView):
     success_url = reverse_lazy('blog:post_list')
     template_name = 'blog/form.html'
 
-    def test_func(self): # UserPassesTestMixin에 있고 test_func() 메서드를 오버라이딩, True, False 값으로 접근 제한
+    def test_func(self): 
         return self.get_object().author == self.request.user
 
 
@@ -117,7 +107,7 @@ class PostDeleteView(UserPassesTestMixin, DeleteView):
     model = Post
     success_url = reverse_lazy('blog:post_list')
 
-    def test_func(self): # UserPassesTestMixin에 있고 test_func() 메서드를 오버라이딩, True, False 값으로 접근 제한
+    def test_func(self): 
         return self.get_object().author == self.request.user
 
 post_delete = PostDeleteView.as_view()
@@ -130,10 +120,9 @@ def comment_new(request, pk):
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
-            comment = form.save(commit=False) # commit=False는 DB에 저장하지 않고 객체만 반환
+            comment = form.save(commit=False) 
             comment.post = post
             comment.author = request.user
-            # comment.parent_comment = 
             comment.save()
             return redirect('blog:post_detail', pk)
     else:
@@ -149,7 +138,7 @@ def comment_reply(request, pk, parent_comment):
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
-            comment = form.save(commit=False) # commit=False는 DB에 저장하지 않고 객체만 반환
+            comment = form.save(commit=False) 
             comment.post = post
             comment.author = request.user
             comment.parent_comment = Comment.objects.get(pk = parent_comment)

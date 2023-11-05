@@ -98,16 +98,12 @@
 
 
 <script>
-  // div 취득
+  // 클립보드 복사
   const result = document.getElementById("cubeResult");
 
-  // button 클릭 이벤트
   document.getElementById("copyBtn").onclick = () => {
     tx = result.textContent
-    tx = tx + '<br>'
-    console.log(tx)
-    window.navigator.clipboard.writeText(result.textContent).then(() => {
-      // 복사가 완료되면 호출된다.
+    window.navigator.clipboard.writeText(tx).then(() => {
       alert("복사완료");
     });
   };
