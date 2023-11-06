@@ -90,8 +90,7 @@
                         {% else %}
                             <div class="card-body">
                                 <div class="small text-muted">{{ post.updated_at }}</div>
-            
-                                <h2 class="card-title h4">{{ post.title }}</h2>
+                                <h2 class="card-title h4">{{ post.title }}(비공개) by {{post.author}}</h2>
                                 <a class="btn btn-primary" href="{% url 'blog:post_detail' post.pk %}">글 보기</a>
                             </div>
 

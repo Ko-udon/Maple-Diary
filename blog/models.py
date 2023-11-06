@@ -12,7 +12,7 @@ class Post(models.Model):
     content = models.TextField(verbose_name="내용")
     category = models.ManyToManyField('Tag', verbose_name="태그", blank=True)
     view_count = models.PositiveIntegerField(default=0)
-    like_count = models.PositiveIntegerField(default=0)
+    # like_count = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
 
@@ -29,7 +29,7 @@ class Comment(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE
     )
-    like_count = models.PositiveIntegerField(default=0)
+    #like_count = models.PositiveIntegerField(default=0)
     message = models.TextField(verbose_name="")
 
     parent_comment = models.ForeignKey('self', on_delete=models.CASCADE, null=True)
