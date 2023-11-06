@@ -192,8 +192,19 @@ ___
 -> 작성된 글은 작성자만이 수정 및 삭제 가능
   
 ![글작성-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/1d41abc7-b102-4a8e-a8c9-afe759804612)
+
+### 글 편집
+- 수정과 편집은 모두 작성자만 가능
+- 글 수정
+
+![글 수정-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/cbb50785-d5d3-495f-b6a3-4547d3f9cb43)
 <br>
 
+- 글 삭제
+
+![글 삭제 - gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/c45740e1-7aea-4ebf-a1e7-0a09f72affa8)
+
+<br>
 
 ### 글 조회
 - 게시글 제목으로 검색
@@ -219,16 +230,6 @@ ___
 
 ![게시글에서 바로 태그검색-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/6e4a5a6b-9a77-46a4-b575-a44a7b463b5d)
 
-### 글 편집
-- 수정과 편집은 모두 작성자만 가능
-- 글 수정
-
-![글 수정-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/cbb50785-d5d3-495f-b6a3-4547d3f9cb43)
-<br>
-
-- 글 삭제
-
-![글 삭제 - gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/c45740e1-7aea-4ebf-a1e7-0a09f72affa8)
 
 
 ### 댓글
