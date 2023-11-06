@@ -120,7 +120,7 @@ ___
 
 
 ___
-# 6. URL 및 요구사항 분석
+# 6. URL 구조 및 목업
 
 ## url 구조
 ![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/05546909-05e9-4450-9de1-f54dd0ce4903)
