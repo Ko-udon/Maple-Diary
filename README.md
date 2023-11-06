@@ -27,6 +27,10 @@ ___
 <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
 
 # 3. DB
+[dbDiagram](https://dbdiagram.io/d/Maple-Diary-6538d350ffbf5169f068db08)
+![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/2ffdb5bf-b7e6-45d1-b0d0-1eca3e01a652)
+
+
 
 # 4. WBS
 ![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/8d16b0cf-79e2-41ff-ad1f-8ed63daabac6)
