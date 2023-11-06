@@ -140,7 +140,39 @@ ___
 ___
 
 # 7. 구현
+## 공통
+### 없는 페이지에 접근시 '잘못된 접근입니다' 라는 문구가 뜨는 페이지로 이동 (500)
+![404-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/e1f5982a-e363-4263-b65f-e5601ebffd51)
 
+### 없는 게시글에 접근시 '존재하지 않는 게시글입니다' 라는 문구가 뜨는 페이지로 이동 (404)
+![500-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/a173dea1-0d56-487a-ac85-c55e8835d17a)
+
+
+### 반응형 페이지
+![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/38c3ed9d-f517-455d-a494-042b48506264)
+![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/4bc91f74-0044-4831-85b7-e4dfd2f34ce3)
+
+
+## 사용자
+### 회원가입
+- 아이디와 비밀번호로 회원가입 가능
+- 회원가입에 성공하면 자동으로 로그인 되어 프로필 작성 페이지로 이동
+![회원가입-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/f3d28cee-2888-44ed-9500-5e0a7809fa0c)
+
+### 프로필
+- 닉네임, 게임을 플레이 중인 서버, 캐릭터 이미지, 자기소개, api 키를 작성함
+- 캐릭터 이미지와 api키는 작성하지 않아도 됨
+- 프로필은 수정 가능
+![프로필 작성-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/0cf82ab4-9dc7-4807-87a6-b9e89421175d)
+![프로필 수정수정-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/f1b14ff5-d119-4245-b967-cecc377063d7)
+
+
+### 로그인/로그아웃
+![로그인_로그아웃-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/926ed3f9-e07b-4a78-a243-c621426c342e)
+
+## API
+
+## 블로그
 
 
 
