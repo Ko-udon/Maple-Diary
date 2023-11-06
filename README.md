@@ -116,7 +116,8 @@ ___
 ```
 
 ## 시스템 아키텍처
-![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/bdef7f1c-fd2c-4b1c-adc3-f153f69279cc)
+![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/f79cdd64-6c72-44ab-8f1e-66ea632bd5ed)
+
 
 
 ___
