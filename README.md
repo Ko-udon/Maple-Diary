@@ -256,7 +256,7 @@ ___
 - 비공개 글은 댓글 사용 불가
 - 작성자만 상세 페이지 조회 가능
 
-![비공개글-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/181e2e7e-6b7a-4921-aab2-d75cbea03aab)
+![비공개글조회-gif](https://github.com/WishMarket/WishMarket-BE/assets/79897135/98a95153-060a-42b4-8681-467bdd4c4869)
 
 - 작성자가 아닌 사람은 상세 페이지 조회 불가능
 
