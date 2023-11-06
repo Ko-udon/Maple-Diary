@@ -40,7 +40,7 @@ ___
 
 # 5. 아키텍처
 
-## 프로젝트 구조
+## 파일트리
 ___
 ```
 📦MINIPROJECT_BLOG
@@ -116,8 +116,8 @@ ___
 ```
 
 ## 시스템 아키텍처
-![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/f79cdd64-6c72-44ab-8f1e-66ea632bd5ed)
 
+![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/a868cb29-ef93-4918-a3d7-4f833d73f8e7)
 
 
 ___
