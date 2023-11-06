@@ -197,7 +197,8 @@ ___
 - 수정과 편집은 모두 작성자만 가능
 - 글 수정
 
-![글 수정-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/cbb50785-d5d3-495f-b6a3-4547d3f9cb43)
+![글수정-gif](https://github.com/Ko-udon/Algorithm/assets/79897135/28f1ba8a-1ea0-44fd-b76d-e19ccc8f2fb5)
+
 <br>
 
 - 글 삭제
