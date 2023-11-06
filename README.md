@@ -143,11 +143,12 @@ ___
 # 7. 구현
 ## 공통
 ### 서버 에러시 '잘못된 접근입니다' 라는 문구가 뜨는 페이지로 이동 (500)
+
 ![404-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/e1f5982a-e363-4263-b65f-e5601ebffd51)
 
 ### 삭제된 게시글에 접근시 '존재하지 않는 게시글입니다' 라는 문구가 뜨는 페이지로 이동 (404)
-![404](https://github.com/WishMarket/WishMarket-BE/assets/79897135/19982f9a-d88b-46a5-841e-0d335d0fb53a)
 
+![404-gif](https://github.com/WishMarket/WishMarket-BE/assets/79897135/ba1af468-ca80-4a41-802a-8131e5e503a0)
 
 ### 반응형 페이지
 ![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/38c3ed9d-f517-455d-a494-042b48506264)
