@@ -212,6 +212,13 @@ ___
 - 작성글에 있는 태그를 클릭하여 태그로 게시글 검색으로 바로 이동 가능
 ![게시글에서 바로 태그검색-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/6e4a5a6b-9a77-46a4-b575-a44a7b463b5d)
 
+### 글 편집
+- 수정과 편집은 모두 작성자만 가능
+- 글 수정
+![글 수정-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/cbb50785-d5d3-495f-b6a3-4547d3f9cb43)
+<br>
+- 글 삭제
+![글 삭제 - gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/c45740e1-7aea-4ebf-a1e7-0a09f72affa8)
 
 
 ### 댓글
@@ -230,10 +237,10 @@ ___
 
 
 ### 비공개 글
-- 게시글 제목 뒤에 by (닉네임) 으로 표시 (지금 로컬에서만 됨)
+- 게시글 제목 뒤에 by (닉네임) 으로 표시 
 - 비공개 글은 댓글 사용 불가
 - 작성자만 상세 페이지 조회 가능
-![비공개 본인 글 - gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/ddacc7a0-6e3a-48a7-9858-89da447fbfaf)
+![비공개글-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/181e2e7e-6b7a-4921-aab2-d75cbea03aab)
 
 - 작성자가 아닌 사람은 상세 페이지 조회 불가능
 ![비공개글-조회불가능](https://github.com/Ko-udon/TodayWatch/assets/79897135/380f7ee0-7009-4e6c-a636-3bfb13086051)
