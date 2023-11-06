@@ -199,7 +199,7 @@ ___
 - 게시글 제목으로 검색
 -> 글 제목에 포함된 내용으로 글 조회
   
-![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/aad0302e-b181-4a84-bc28-600ef1386fd8)
+![제목검색-gif](https://github.com/WishMarket/WishMarket-BE/assets/79897135/24dc2417-4ded-4b99-a0fe-9c26aac9c5d9)
 
 <br>
 
