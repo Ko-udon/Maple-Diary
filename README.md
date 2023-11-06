@@ -122,26 +122,24 @@ ___
 ___
 # 6. URL 및 요구사항 분석
 
-## 목업 페이지
-
 ## url 구조
+![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/05546909-05e9-4450-9de1-f54dd0ce4903)
 
-## 기능 설계 
-![image](https://github.com/Ko-udon/TodayWatch/assets/79897135/b46115dc-1e54-4484-a3ae-a1ddce462029)
-
-
-(기능 목록)
-- 로그인/로그아웃의 경우, 현제 서버에 유저 정보를 저장할 수 없기 때문에 기본적인 기능만 구현
-- 커뮤니티 기능은 글 조회가 가능하게끔 뼈대만 맞추고 게시글 작성같은 기능은 생략
+![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/b4511e21-2c77-4a53-a74f-9e1192bfaa4d)
 
 
 ## 목업 페이지
-[목업 페이지 이동](https://ovenapp.io/view/jEy2OwO4tz6mrygT4mDOLtEDxuMEzGEE/)
-![image](https://github.com/Ko-udon/ormi_project1/assets/79897135/d25810f4-53b5-45c7-9635-7b76602f78f4)
+![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/6cf4b55d-5332-4f16-b7a7-5364dfb069be)
+<br>
+[목업 페이지 이동](https://ovenapp.io/project/AuTOhRVaWIshS0Pz6F2esakzUYXEwo0H#wWD2p)
+
 
 ___
 
 # 7. 구현
+
+
+
 
 
 
