@@ -1,15 +1,27 @@
-# miniproject_blog
+# Maple Diary
+- 넥슨에서 운영중인 게임 [메이플스토리](https://maplestory.nexon.com/Home/Main)를 플레이하며 본인의 이야기를 공유하는 서비스
 
+___
+# 1. 프로젝트 소개
+  
+## 개발 기간
+2023.10.25 ~ 2023.11.06
 
+## 역할
+고동우: 서비스 기획 및 구현
 
-![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/bdef7f1c-fd2c-4b1c-adc3-f153f69279cc)
-
-
+## 설명
+- 글 작성, 수정, 삭제, 조회 등 블로그의 기본적인 기능을 기반으로 둔 커뮤니티 서비스 
+- 강화 아이템 '큐브' 사용기록을 공식에서 제공하는 API를 통해 기록을 확인하거나 게시글에 작성하여 공유 가능
+- 사용자는 본인의 프로필 작성, 댓글 및 대댓글 작성 가능
+___
 
 
 # 2. 개발 환경
 ## 사용언어
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white"> <img src="https://img.shields.io/badge/amazonaws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"> 
+<br>
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) <img src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
 
 ## 에디터
 <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
