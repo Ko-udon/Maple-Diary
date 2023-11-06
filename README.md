@@ -161,12 +161,10 @@ ___
 ![회원가입-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/f3d28cee-2888-44ed-9500-5e0a7809fa0c)
 
 ### 프로필
-- 닉네임, 게임을 플레이 중인 서버, 캐릭터 이미지, 자기소개, api 키를 작성함
+- 닉네임, 게임을 플레이 중인 서버를 선택, 캐릭터 이미지, 자기소개, api 키를 작성함
 - 캐릭터 이미지와 api키는 작성하지 않아도 됨
 - 프로필은 수정 가능
-![프로필 작성-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/0cf82ab4-9dc7-4807-87a6-b9e89421175d)
-<br>
-- 프로필은 수정 가능
+
 ![프로필 수정수정-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/f1b14ff5-d119-4245-b967-cecc377063d7)
 
 
