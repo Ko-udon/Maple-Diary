@@ -152,6 +152,7 @@ ___
 ![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/38c3ed9d-f517-455d-a494-042b48506264)
 ![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/4bc91f74-0044-4831-85b7-e4dfd2f34ce3)
 
+___
 
 ## 사용자
 ### 회원가입
@@ -180,6 +181,7 @@ ___
 - 키를 등록하지 않은 사용자들은 이용 불가
 ![api-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/979bbfae-4192-4fdc-b00f-730ce111b6e0)
 
+___
 
 ## 블로그
 ### 글 작성
@@ -203,9 +205,11 @@ ___
 ![태그검색-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/268f8d9b-196d-4144-b488-d855f59089ce)
 
 
-3. 글 상세
+### 글 상세
 - 작성날짜, 작성자, 조회수, 태그, 이미지, 글 내용으로 구성된 상세 페이지로 이동
-	-> 작성글에 있는 태그를 클릭하여 태그로 게시글 검색으로 바로 이동 가능
+-> 작성글에 있는 태그를 클릭하여 태그로 게시글 검색으로 바로 이동 가능
+  
+![글상세조회-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/2fede186-f41b-423c-81c4-654195bda332)
 
 
 댓글
