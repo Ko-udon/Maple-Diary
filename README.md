@@ -1,4 +1,4 @@
-# Maple Diary
+# [Maple Diary](http://43.202.121.54:8000/)
 - 넥슨에서 운영중인 게임 [메이플스토리](https://maplestory.nexon.com/Home/Main)를 플레이하며 본인의 이야기를 공유하는 서비스
 
 ___
@@ -27,9 +27,9 @@ ___
 <img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=flat-square&logo=Visual Studio Code&logoColor=white"/>
 
 # 3. DB
-[dbDiagram](https://dbdiagram.io/d/Maple-Diary-6538d350ffbf5169f068db08)
 ![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/2ffdb5bf-b7e6-45d1-b0d0-1eca3e01a652)
-
+<br>
+[dbDiagram](https://dbdiagram.io/d/Maple-Diary-6538d350ffbf5169f068db08)
 
 
 # 4. WBS
@@ -42,39 +42,81 @@ ___
 
 ## 프로젝트 구조
 ___
-```📦TodayWatch
- ┣ 📂css
- ┃ ┣ 📜common.css
- ┃ ┣ 📜function.css
- ┃ ┣ 📜list.css
- ┃ ┣ 📜login.css
- ┃ ┗ 📜view.css
- ┣ 📂fonts
- ┃ ┣ 📜Jua-Regular.ttf
- ┃ ┗ 📜OFL.txt
- ┣ 📂js
- ┃ ┣ 📜api.js
- ┃ ┗ 📜control.js
- ┣ 📂resource
- ┃ ┣ 📜felix-mooneeram-evlkOfkQ5rE-unsplash.jpg
- ┃ ┣ 📜loading.gif
- ┃ ┣ 📜리얼_포스터.jpg
- ┃ ┣ 📜멜로가체질_포스터.jpg
- ┃ ┣ 📜바닐라스카이_포스터.jpg
- ┃ ┣ 📜사람 아이콘.png
- ┃ ┣ 📜직접검색.gif
- ┃ ┗ 📜커뮤니티.gif
- ┣ 📜index.html
- ┗ 📜README.md
+```
+📦MINIPROJECT_BLOG
+ ┣ 📂blog
+ ┃ ┣ 📂migrations
+ ┃ ┣ 📂__pycache__
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜forms.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┣ 📜views.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂maple_diary
+ ┃ ┣ 📂__pycache__
+ ┃ ┣ 📜asgi.py
+ ┃ ┣ 📜settings.py
+ ┃ ┣ 📜urls.py
+ ┃ ┣ 📜wsgi.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂media
+ ┃ ┣ 📂blog
+ ┃ ┗ 📂UserCharacter
+ ┣ 📂static
+ ┃ ┣ 📂assets
+ ┃ ┃ ┣ 📜artwork_111.jpg
+ ┃ ┃ ┣ 📜favicon.ico
+ ┃ ┃ ┣ 📜main_bg.jpg
+ ┃ ┃ ┣ 📜maple-favicon.ico
+ ┃ ┃ ┣ 📜maple-favicon.png
+ ┃ ┃ ┗ 📜No_img.png
+ ┃ ┣ 📂css
+ ┃ ┃ ┗ 📜styles.css
+ ┃ ┣ 📂js
+ ┃ ┃ ┗ 📜scripts.js
+ ┃ ┗ 📜index.html
+ ┣ 📂templates
+ ┃ ┣ 📂blog
+ ┃ ┃ ┣ 📜blog.html
+ ┃ ┃ ┣ 📜form.html
+ ┃ ┃ ┣ 📜post_confirm_delete.html
+ ┃ ┃ ┣ 📜post_detail.html
+ ┃ ┃ ┗ 📜post_list.html
+ ┃ ┣ 📂user
+ ┃ ┃ ┣ 📜cube_history.html
+ ┃ ┃ ┣ 📜form.html
+ ┃ ┃ ┗ 📜profile_detail.html
+ ┃ ┣ 📜404.html
+ ┃ ┣ 📜500.html
+ ┃ ┗ 📜main.html
+ ┣ 📂user
+ ┃ ┣ 📂migrations
+ ┃ ┣ 📂__pycache__
+ ┃ ┣ 📜admin.py
+ ┃ ┣ 📜apps.py
+ ┃ ┣ 📜forms.py
+ ┃ ┣ 📜models.py
+ ┃ ┣ 📜tests.py
+ ┃ ┣ 📜urls.py
+ ┃ ┣ 📜views.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂venv
+ ┃ ┣ 📂Include
+ ┃ ┣ 📂Lib
+ ┃ ┣ 📂Scripts
+ ┃ ┗ 📜pyvenv.cfg
+ ┣ 📜.gitignore
+ ┣ 📜db.sqlite3
+ ┣ 📜manage.py
+ ┣ 📜README.md
+ ┗ 📜requirements.txt
 ```
 
 ## 시스템 아키텍처
 ![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/bdef7f1c-fd2c-4b1c-adc3-f153f69279cc)
-
-
-## 배포
-GitHub Pages
-- [오늘은 뭐 볼까?](https://ko-udon.github.io/TodayWatch/)
 
 
 ___
