@@ -129,7 +129,7 @@ ___
 ![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/b4511e21-2c77-4a53-a74f-9e1192bfaa4d)
 
 ## 기능설계
-![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/be00de58-47e8-44ed-b2fc-3d2dac55cf8f)
+![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/f69b9b68-b5fb-4b67-92c8-c5f978f82d7d)
 
 
 ## 목업 페이지
@@ -159,6 +159,7 @@ ___
 ### 회원가입
 - 아이디와 비밀번호로 회원가입 가능
 - 회원가입에 성공하면 자동으로 로그인 되어 프로필 작성 페이지로 이동
+
 ![회원가입-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/f3d28cee-2888-44ed-9500-5e0a7809fa0c)
 
 ### 프로필
@@ -178,6 +179,7 @@ ___
 - 키를 등록한 사용자들은 날짜를 선택해 그날 강화한 아이템 기록을 볼 수 있음
 - 복사 버튼을 눌러 강화 기록을 클립보드에 저장해 글 작성시 붙여넣기 할 수 있음(현재 복사기능은 로컬에서만 가능,,,)
 - 키를 등록하지 않은 사용자들은 이용 불가
+
 ![api-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/979bbfae-4192-4fdc-b00f-730ce111b6e0)
 
 ___
@@ -185,53 +187,65 @@ ___
 ## 블로그
 ### 글 작성
 - 글쓰기 링크로 이동하여 작성 가능
-->  공개/비공개 여부 선택, 글 제목, 이미지, 글 내용, 태그(여러개 선택 가능)로 작성가능
+-> 공개/비공개 여부 선택, 글 제목, 이미지, 글 내용, 태그(여러개 선택 가능)로 작성가능
+-> 작성된 글은 작성자만이 수정 및 삭제 가능
+  
 ![글작성-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/1d41abc7-b102-4a8e-a8c9-afe759804612)
 <br>
-- 작성된 글은 작성자만이 수정 및 삭제 가능
-
 
 
 ### 글 조회
 - 게시글 제목으로 검색
 -> 글 제목에 포함된 내용으로 글 조회
+  
 ![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/aad0302e-b181-4a84-bc28-600ef1386fd8)
 
 <br>
 
 - 태그로 검색
 -> 해당 태그로 작성한 게시글 조회
+  
 ![태그검색-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/268f8d9b-196d-4144-b488-d855f59089ce)
 
 
 ### 글 상세
 - 작성날짜, 작성자, 조회수, 태그, 이미지, 글 내용으로 구성된 상세 페이지로 이동
+
 ![글상세조회-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/2fede186-f41b-423c-81c4-654195bda332)
 <br>
+
 - 작성글에 있는 태그를 클릭하여 태그로 게시글 검색으로 바로 이동 가능
+
 ![게시글에서 바로 태그검색-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/6e4a5a6b-9a77-46a4-b575-a44a7b463b5d)
 
 ### 글 편집
 - 수정과 편집은 모두 작성자만 가능
 - 글 수정
+
 ![글 수정-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/cbb50785-d5d3-495f-b6a3-4547d3f9cb43)
 <br>
+
 - 글 삭제
+
 ![글 삭제 - gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/c45740e1-7aea-4ebf-a1e7-0a09f72affa8)
 
 
 ### 댓글
 - 로그인한 사용자들은 게시글 하단에 댓글 작성 가능
 - 댓글은 작성자: 작성날짜, 내용 으로 구성하여 출력
+
 ![댓글작성-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/1301fe32-b4fa-46d6-873d-a687dd83ba14)
 <br>
+
 - 로그인하지 않은 사용자들은 댓글 작성 불가능, 글 조회만 가능
+
 ![비로그인댓글불가-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/571ae5b1-4865-4bdb-8bdf-e8eed5376f12)
 
 
 ### 대댓글
 - 작성된 댓글 밑에 대댓글 작성 가능
 - 대댓글은 댓글 밑에 ㄴ 표시 밑에 작성자: 작성날짜, 내용 으로 구성하여 출력
+
 ![대댓글-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/15e64dcb-1035-4581-9740-9aceab3f17d5)
 
 
@@ -239,9 +253,11 @@ ___
 - 게시글 제목 뒤에 by (닉네임) 으로 표시 
 - 비공개 글은 댓글 사용 불가
 - 작성자만 상세 페이지 조회 가능
+
 ![비공개글-gif](https://github.com/Ko-udon/TodayWatch/assets/79897135/181e2e7e-6b7a-4921-aab2-d75cbea03aab)
 
 - 작성자가 아닌 사람은 상세 페이지 조회 불가능
+
 ![비공개글-조회불가능](https://github.com/Ko-udon/TodayWatch/assets/79897135/380f7ee0-7009-4e6c-a636-3bfb13086051)
 
 
