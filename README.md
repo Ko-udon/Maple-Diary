@@ -127,6 +127,9 @@ ___
 
 ![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/b4511e21-2c77-4a53-a74f-9e1192bfaa4d)
 
+## 기능설계
+![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/be00de58-47e8-44ed-b2fc-3d2dac55cf8f)
+
 
 ## 목업 페이지
 ![image](https://github.com/Ko-udon/miniproject_blog/assets/79897135/6cf4b55d-5332-4f16-b7a7-5364dfb069be)
